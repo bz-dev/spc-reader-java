@@ -210,7 +210,7 @@ public class ParseLSB {
             }
         }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("biubiubiu test comment part!").append("\n").append("\n");
+        //stringBuilder.append("Comment section.").append("\n").append("\n");
         stringBuilder.append(StringUtils.join(csvHeader, "\t"));
         stringBuilder.append("\n");
 
