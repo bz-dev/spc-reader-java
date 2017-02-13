@@ -1,0 +1,43 @@
+group 'wingardium.java'
+version '1.0.0-ALPHA'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "Reader"
+
+sourceCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes('Implementation-Title': 'SPC Reader Java',
+                'Main-Class': 'Reader',
+                'Implementation-Version': version)
+    }
+    baseName = project.name + '-dist'
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    with jar
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.3.1'
+}
