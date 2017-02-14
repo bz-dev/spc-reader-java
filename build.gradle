@@ -16,6 +16,13 @@ sourceSets {
     }
 }
 
+jar {
+    manifest {
+        attributes("Implementation-Title": "SPC Reader Java",
+                "Implementation-Version": version)
+    }
+}
+
 task fatJar(type: Jar) {
     manifest {
         attributes('Implementation-Title': 'SPC Reader Java',
