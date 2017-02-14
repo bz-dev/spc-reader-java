@@ -47,6 +47,12 @@ The sum of range start and end values must be less than 1 to avoid overlapped pe
 
 For example, if the scanning resolution is 0.05, and the peak range start/end values are set to 0.4/0.35, then for peak point 7, it sums values from 6.60 to 7.35, which equals to 8 data points before peak point, 7 data points after peak point, plus peak point itself.
 
+## Citation
+Please cite this tool as below or use your desired citation styles:
+```
+Zhao, Bo. (2017). SPC Reader Java [Software]. Zenodo. http://doi.org/10.5281/zenodo.291467
+```
+
 ## TODO
 - Add header information into exported tsv file comment section
 - Add range start/end values validation before process
