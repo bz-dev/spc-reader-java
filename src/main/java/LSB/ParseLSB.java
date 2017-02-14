@@ -824,8 +824,8 @@ class SubFileHeader {
     }
 
     public SubFileHeader(byte[] bytes) {
-        this.subflgs = Utils.getInt(bytes[0]);
-        this.subexp = Utils.getInt(bytes[1]);
+        this.subflgs = bytes[0];
+        this.subexp = bytes[1];
         this.subindx = Utils.getInt(bytes, 2, 2);
         this.subtime = Utils.getFloat(bytes, 4, 4);
         this.subnext = Utils.getFloat(bytes, 8, 4);
