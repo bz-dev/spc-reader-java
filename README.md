@@ -1,6 +1,7 @@
 # spc-reader-java
 
 [![Build Status](https://travis-ci.org/wingardium/spc-reader-java.svg?branch=master)](https://travis-ci.org/wingardium/spc-reader-java)
+[![DOI](https://zenodo.org/badge/81833901.svg)](https://zenodo.org/badge/latestdoi/81833901)
 
 This java library provides functions that read and convert SPC files to TSV files.
 
